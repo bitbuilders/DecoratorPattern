@@ -34,7 +34,7 @@ std::string DateFormatter::GetHour(int hour)
 	return std::to_string(hour % 12);
 }
 
-std::string DateFormatter::SetLength(std::string str, int length)
+std::string DateFormatter::SetLength(const std::string& str, int length)
 {
 	int under = length - str.size();
 	std::string s(under, '0');

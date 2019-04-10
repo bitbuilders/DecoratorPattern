@@ -6,8 +6,8 @@ class Writer
 {
 public:
 	Writer() { }
-	~Writer();
 
-	virtual void Write(std::string file, std::string content) const = 0;
+	virtual void Write(const std::string& file, const std::string& content) const = 0;
+	virtual void Destroy() = 0;
 };
 

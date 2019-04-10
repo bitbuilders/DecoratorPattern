@@ -4,12 +4,9 @@
 class Reader
 {
 public:
-	Reader(const Reader& reader) { m_reader = &reader; }
-	~Reader();
+	Reader() { }
 
-	virtual void Read(std::string file) = 0;
-
-protected:
-	const Reader* m_reader;
+	virtual std::string Read(const std::string& file) const = 0;
+	virtual void Destroy() = 0;
 };
 

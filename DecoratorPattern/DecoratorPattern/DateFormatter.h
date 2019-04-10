@@ -11,6 +11,6 @@ private:
 
 	static std::string GetMonth(int mon);
 	static std::string GetHour(int hour);
-	static std::string SetLength(std::string str, int length = 2);
+	static std::string SetLength(const std::string& str, int length = 2);
 };
 

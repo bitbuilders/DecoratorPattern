@@ -3,11 +3,16 @@
 class WriterDecorator : public Writer
 {
 public:
-	WriterDecorator();
-	WriterDecorator(const Writer* writer) { m_writer = writer; std::cout << "Wow that's neat!\n"; }
-	~WriterDecorator();
+	WriterDecorator(Writer* writer) { m_writer = writer; }
+
+	virtual void Write(const std::string& file, const std::string& content) const = 0;
+	inline void Destroy() 
+	{
+		if (m_writer) m_writer->Destroy();
+		delete m_writer;
+	}
 
 protected:
-	const Writer* m_writer;
+	Writer* m_writer;
 };
 

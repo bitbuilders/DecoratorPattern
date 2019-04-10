@@ -2,17 +2,10 @@
 #include "WriterComponent.h"
 #include <fstream>
 
-
-WriterComponent::~WriterComponent()
-{
-}
-
-void WriterComponent::Write(std::string file, std::string content) const
+void WriterComponent::Write(const std::string& file, const std::string& content) const
 {
 	std::ofstream myfile;
 	myfile.open(file);
 	myfile << content;
 	myfile.close();
-	
-	std::cout << "WriterComponent Write\n";
 }

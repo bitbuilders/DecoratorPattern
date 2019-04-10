@@ -155,14 +155,18 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="Reader.h" />
     <ClInclude Include="ReaderComponent.h" />
-    <ClInclude Include="SignatureWriter.h" />
+    <ClInclude Include="ReaderDecorator.h" />
+    <ClInclude Include="ReadLineEndings.h" />
+    <ClInclude Include="ReadShiftDown.h" />
+    <ClInclude Include="WriteSignature.h" />
     <ClInclude Include="Writer.h" />
     <ClInclude Include="WriterComponent.h" />
     <ClInclude Include="WriterDecorator.h" />
+    <ClInclude Include="WriteShiftUp.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DateFormatter.cpp" />
-    <ClCompile Include="DecoratorPattern.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -171,10 +175,14 @@
     </ClCompile>
     <ClCompile Include="Reader.cpp" />
     <ClCompile Include="ReaderComponent.cpp" />
-    <ClCompile Include="SignatureWriter.cpp" />
+    <ClCompile Include="ReaderDecorator.cpp" />
+    <ClCompile Include="ReadLineEndings.cpp" />
+    <ClCompile Include="ReadShiftDown.cpp" />
+    <ClCompile Include="WriteSignature.cpp" />
     <ClCompile Include="Writer.cpp" />
     <ClCompile Include="WriterComponent.cpp" />
     <ClCompile Include="WriterDecorator.cpp" />
+    <ClCompile Include="WriteShiftUp.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

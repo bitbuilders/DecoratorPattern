@@ -5,8 +5,8 @@ class WriterComponent : public Writer
 {
 public:
 	WriterComponent() {}
-	~WriterComponent();
 
-	void Write(std::string file, std::string content) const;
+	void Write(const std::string& file, const std::string& content) const;
+	void Destroy() { }
 };
 
